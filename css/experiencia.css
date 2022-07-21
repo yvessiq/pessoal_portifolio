@@ -1,0 +1,138 @@
+.subtitulo {
+  font-size: 8rem;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 4ch;
+  color: #e0e0e0;
+}
+
+.experiencia {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  padding: 40px 20px;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.experiencia_texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  color: #525252;
+  margin-bottom: 60px;
+}
+
+.experiencia_texto strong {
+  color: #141414;
+}
+
+.empresa {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.empresa::before {
+  content: " ";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #67dd0a);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.empresa_ano {
+  position: absolute;
+  top: 20px;
+  width: 60px;
+  text-align: right;
+  left: -80px;
+}
+
+.empresa_titulo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.empresa_texto {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+}
+
+.empresa_habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.empresa_habilidades li {
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding: 5px 10px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+@media (max-width: 1000px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .subtitulo {
+    word-break: normal;
+  }
+
+  .experiencia_texto {
+    max-width: 50ch;
+  }
+
+  .empresa_ano {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+}
+
+@media (max-width: 800px) {
+  .experiencia {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: #141414;
+    max-width: initial;
+  }
+
+  .experiencia_texto {
+    font-size: 1rem;
+    max-width: 70ch;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+  }
+}

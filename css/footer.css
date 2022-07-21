@@ -1,0 +1,48 @@
+footer {
+  background: #000;
+}
+
+.footer_container {
+  max-width: 1200px;
+  color: #fff;
+  margin: 0 auto;
+  display: grid;
+  padding: 120px 20px 60px 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  position: relative;
+}
+
+.footer_texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #a3a3a3;
+}
+
+.lista_elementos {
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.lista_elementos a {
+  color: #fff;
+}
+
+.footer_copy {
+  font-size: 1.125rem;
+  color: #8f8f8f;
+  grid-column: 1 /-1;
+}
+
+@media (max-width: 800px) {
+  .footer_container {
+    grid-template-columns: 1fr;
+  }
+
+  .lista_elementos {
+    font-size: 1.5rem;
+  }
+}
