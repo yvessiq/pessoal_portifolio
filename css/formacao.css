@@ -35,7 +35,7 @@
 .formacao_texto {
   font-size: 1.5rem;
   line-height: 1.33;
-  max-width: 40ch;
+  max-width: 60ch;
   color: #a3a3a3;
   margin-bottom: 60px;
 }
@@ -44,57 +44,71 @@
   color: #fff;
 }
 
-.formacao_lista {
+.cursos {
   color: #a3a3a3;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.faculdades {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   background-color: #000;
   border-radius: 4px;
-  padding: 20px;
-}
-
-.faculdade_tipo {
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-bottom: 10px;
-}
-
-.faculdade_curso {
-  flex: 1;
-  font-size: 1.125rem;
-  color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   position: relative;
 }
 
-.faculdade_curso::before {
+.curso_lista {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.curso_lista2 {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  gap: 20px;
+  padding: 20px;
+}
+
+.curso_categoria {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.curso_tipo {
+  font-size: 1.25rem;
+  padding-top: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.curso_tipo::before {
   content: " ";
   display: block;
-  width: 4px;
-  height: 20px;
+  width: 5px;
+  height: 25px;
   background: linear-gradient(#da1c1c, #ff7f48);
   position: absolute;
-  left: -24px;
+  left: -25px;
+  top: -2;
 }
 
-.faculdade_instituicao {
+.curso_plataforma {
   font-size: 1.125rem;
-  color: #a3a3a3;
+  text-align: center;
+  color: #fff;
+  padding: 8px 16px;
+  background: #141414;
+  border-radius: 4px;
 }
 
-.cursos {
+.graduacao {
   margin-bottom: 60px;
 }
 
-.formacao_extra h3 {
+.graduacao h3 {
   font-size: 0.875rem;
   line-height: 1.4;
   color: #8f8f8f;
@@ -103,9 +117,10 @@
   position: relative;
 }
 
-.formacao_extra h3::before {
+.graduacao h3::before {
   display: block;
   content: "";
+  background: url("../img_portifólio_modificado/detalhe.svg") no-repeat center;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -113,31 +128,17 @@
   top: -4px;
 }
 
-.cursos h3::before {
-  background: url("../img/cursos.svg");
-}
-
-.idiomas h3::before {
-  background: url("../img/idiomas.svg");
-}
-
-.formacao_extra li {
+.graduacao li {
   font-size: 1.125rem;
   line-height: 1.1;
   margin-bottom: 20px;
 }
 
-.formacao_extra span {
+.graduacao span {
   color: #8f8f8f;
 }
 
-.formacao_extra .cursos li {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .formacao_container {
     grid-template-columns: 1fr;
     padding: 60px 20px;
@@ -155,17 +156,26 @@
     font-size: 1.25rem;
   }
 
-  .cursos,
-  .idiomas {
-    display: flex;
-    justify-content: space-around;
+  .graduacao h3::before {
+    left: 0px;
+    top: -30px;
   }
-}
 
-@media (max-width: 600px) {
-  .cursos,
-  .idiomas {
-    flex-direction: column;
-    justify-content: center;
+  @media (max-width: 600px) {
+    .cursos {
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: start;
+      gap: 30px;
+      padding: 10px;
+    }
+
+    .curso_categoria {
+      margin-bottom: 10px;
+    }
+
+    .curso_tipo::before {
+      left: -35px;
+    }
   }
 }
